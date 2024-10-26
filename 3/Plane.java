@@ -67,9 +67,9 @@ public class Plane {
 
     return model.equals(other.model) &&
         manufacturer.equals(other.manufacturer) &&
-        (maxSpeed == other.maxSpeed) &&
-        (firstFlightYear == other.firstFlightYear) &&
-        (inProduction == other.inProduction);
+        maxSpeed == other.maxSpeed &&
+        firstFlightYear == other.firstFlightYear &&
+        inProduction == other.inProduction;
   }
 
   /**
@@ -85,7 +85,6 @@ public class Plane {
     String inProduction = this.inProduction ? "✓" : "✗";
 
     return String.format("Plane{ %-24s %-32s %8.2f   %4d   %s }",
-        model, manufacturer, maxSpeed, firstFlightYear, inProduction
-    );
+        model, manufacturer, maxSpeed, firstFlightYear, inProduction);
   }
 }

@@ -58,8 +58,7 @@ public class Lab3 {
   public static void sortPlanes(Plane[] planes) {
     Arrays.sort(planes, Comparator
         .comparing((Plane p) -> p.inProduction)
-        .thenComparing((Plane p) -> p.maxSpeed, Comparator.reverseOrder())
-    );
+        .thenComparing((Plane p) -> p.maxSpeed, Comparator.reverseOrder()));
   }
 
   /**
@@ -67,8 +66,7 @@ public class Lab3 {
    *
    * @param planes an array of Plane objects to search
    * @param plane  the Plane object to find
-   * @return the index of the identical plane if found, or {@code -1} if no identical plane is
-   * found
+   * @return the index of the identical plane if found, or {@code -1} if no identical plane is found
    * @see Plane#equals(Object)
    */
   public static int findIdenticalPlane(Plane[] planes, Plane plane) {

@@ -47,12 +47,9 @@ public class Lab1 {
         float res = Float.intBitsToFloat(xorBits);
 
         if (Float.isNaN(res)) {
-          throw new IllegalArgumentException(
-              String.format(
-                  "Cannot properly perform XOR operation for %f and %f at position (%d, %d)",
-                  n1, n2, i, j
-              )
-          );
+          throw new IllegalArgumentException(String.format(
+              "Cannot properly perform XOR operation for %f and %f at position (%d, %d)",
+              n1, n2, i, j));
         }
 
         resM[i][j] = res;
@@ -91,31 +88,22 @@ public class Lab1 {
     }
 
     if (m2.length != m1Rows) {
-      throw new IllegalArgumentException(
-          String.format(
-              "Matrix 2 must have the same number of rows as matrix 1. Expected %d but found %d.",
-              m1Rows, m2.length
-          )
-      );
+      throw new IllegalArgumentException(String.format(
+          "Matrix 2 must have the same number of rows as matrix 1. Expected %d but found %d.",
+          m1Rows, m2.length));
     }
 
     for (int i = 0; i < m1Rows; i++) {
       if (m1[i].length != m1Cols) {
-        throw new IllegalArgumentException(
-            String.format(
-                "All rows in matrix 1 must have the same number of columns. Row %d has %d columns but expected %d.",
-                i, m1[i].length, m1Cols
-            )
-        );
+        throw new IllegalArgumentException(String.format(
+            "All rows in matrix 1 must have the same number of columns. Row %d has %d columns but expected %d.",
+            i, m1[i].length, m1Cols));
       }
 
       if (m2[i].length != m1[i].length) {
-        throw new IllegalArgumentException(
-            String.format(
-                "Matrices 1 and 2 must have the same dimensions. Mismatch at row %d: matrix 1 has %d columns, matrix 2 has %d columns.",
-                i, m1[i].length, m2[i].length
-            )
-        );
+        throw new IllegalArgumentException(String.format(
+            "Matrices 1 and 2 must have the same dimensions. Mismatch at row %d: matrix 1 has %d columns, matrix 2 has %d columns.",
+            i, m1[i].length, m2[i].length));
       }
     }
   }
